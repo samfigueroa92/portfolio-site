@@ -81,6 +81,36 @@ const ResponsiveProfileHeader = styled.div`
       margin-bottom: 0;
     }
   }
+  @media screen and (max-width: 980px) {
+    background-attachment: scroll;
+    background-position: top left, center center;
+    background-size: auto, cover;
+    left: auto;
+    padding: 6em 4em;
+    position: relative;
+    text-align: center;
+    top: auto;
+    width: 100%;
+    display: block;
+  }
+  & h1{
+    font-size: 1.75em;
+  }
+  & h1 br{
+    display: inline;
+  }
+  @media screen and (max-width: 736px){
+    padding: 2.25em 1.5em;
+    & h1{
+      font-size: 1.35em;
+    }
+  }
+  @media screen and (max-width: 480px){
+    padding: 4.5em 1.5em;
+    & h1 br{
+      display: none;
+    }
+  }
 `;
 
 const InnerHeader = styled.div``;
@@ -99,31 +129,31 @@ const AvatarImage = styled.a`
 `;
 
 const ResponsiveFooterWrapper = styled.div`
-  @media screen and (max-width: 737px) {
+  @media screen and (max-width: 980px) {
     display: none;
   }
 `;
 
-const ResponsiveHeaderWrapper = styled.div`
- 
-`;
+// const ResponsiveHeaderWrapper = styled.div`
+
+// `;
 
 const SideProfile = () => {
   return (
-      <ResponsiveProfileHeader>
-        <InnerHeader>
-          <AvatarImage href="#" className="image avatar">
-            <img src={avatar} alt="Samantha" />
-          </AvatarImage>
-          <h1>
-            <strong>I am Samantha Figueroa</strong>, a full-stack web developer.
-            <br /> Some other text for now.
-          </h1>
-        </InnerHeader>
-        <ResponsiveFooterWrapper>
-          <Footer></Footer>
-        </ResponsiveFooterWrapper>
-      </ResponsiveProfileHeader>
+    <ResponsiveProfileHeader>
+      <InnerHeader>
+        <AvatarImage href="#" className="image avatar">
+          <img src={avatar} alt="Samantha" />
+        </AvatarImage>
+        <h1>
+          <strong>I am Samantha Figueroa</strong>, a full-stack web developer.
+          <br /> Some other text for now.
+        </h1>
+      </InnerHeader>
+      <ResponsiveFooterWrapper>
+        <Footer></Footer>
+      </ResponsiveFooterWrapper>
+    </ResponsiveProfileHeader>
   );
 };
 
